@@ -17,6 +17,7 @@ type Page struct {
 var templates = template.Must(template.ParseFiles("edit.html", "view.html"))
 var validPath = regexp.MustCompile("^/(edit|save|view)/([a-zA-Z]+)$")
 
+// function yet to be implemented
 func getTitle(w http.ResponseWriter, r *http.Request) {
 	m := validPath.FindStringSubmatch(r.URL.Path)
 	if (m == nil) {
